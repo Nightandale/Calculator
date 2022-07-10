@@ -57,7 +57,6 @@ function clear(){
         (operator) => operator.addEventListener("click", handleClick))
 }
 function checkOperators(e){
-    let counter = 0
     if(displayValue[0] == 0 && displayValue[1] == 0){
         displayValue.pop()
     }
@@ -71,7 +70,6 @@ function checkOperators(e){
         && operators.includes(displayValue[displayValue.length-2])){
         displayValue.pop()
         displayValue[displayValue.length-1] = e
-        console.log(displayValue)
     }
     
     if((displayValue.filter(value => {
@@ -80,6 +78,7 @@ function checkOperators(e){
         }
         return false;
     }).length) > 1){
+        displayValue.pop()
         operatorButtons.forEach(
             (operator) => operator.removeEventListener("click", handleClick))
     }

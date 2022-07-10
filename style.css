@@ -29,6 +29,7 @@
     margin-right: auto;
     justify-content: center;
     gap: 2em;
+    font-size: large;
 }
 .left-buttons{
     display: flex;
